@@ -18,11 +18,11 @@ public class Main {
 
             statement = connection.createStatement();
             String sql = "INSERT INTO airplane (airplaneid, callsign, aircraft_type, passenger_capacity, max_altitude, max_speed) "
-                    + "VALUES (33333, 'SCX3006', 'B738', 210, 41000, 530);";
+                    + "VALUES (77777, 'SCX3006', 'B738', 210, 41000, 530);";
             statement.executeUpdate(sql);
 
             sql = "INSERT INTO airplane (airplaneid, callsign, aircraft_type, passenger_capacity, max_altitude, max_speed) "
-                    + "VALUES (44444, 'SCX1177', 'B711', 211, 41001, 531);";
+                    + "VALUES (88888, 'SCX1177', 'B711', 211, 41001, 531);";
             statement.executeUpdate(sql);
 
             statement.close();
