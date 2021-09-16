@@ -1,0 +1,6 @@
+# Intelli J IDE files
+**/.idea/
+
+# Common Ignore Folders
+**/build/
+**/.gradle/
