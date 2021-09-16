@@ -1,0 +1,43 @@
+plugins{
+    //Apply the java plugin to add support for Java
+    id 'java'
+
+    //Apply the application plugin to add support for building a CLI application.
+    id 'application'
+
+    //Apply the Intellij IDEA gradle plugin
+    id 'idea'
+}
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    // Use jcenter for resolving your dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    jcenter()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.postgresql/postgresql
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.23'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    //Define the main class for the application.
+    mainClassName ='com.suncountry.sqldemo.Main'
+}
