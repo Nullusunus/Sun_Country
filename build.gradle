@@ -19,6 +19,9 @@ repositories {
 dependencies {
     // https://mvnrepository.com/artifact/org.postgresql/postgresql
     implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.23'
+
+    // https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc
+    implementation group: 'com.microsoft.sqlserver', name: 'mssql-jdbc', version: '9.4.0.jre11'
 }
 
 group 'org.example'
