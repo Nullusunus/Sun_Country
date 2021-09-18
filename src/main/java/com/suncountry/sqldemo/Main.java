@@ -13,7 +13,9 @@ public class Main {
 
         // Selecting and transforming tables from microsoft sql database and inserting them into postgres database.
         List<String> sqlList = new ArrayList<String>();
-        sqlList = msSql.transform(700000);
+        int randNum = 0;
+        randNum = (int) (Math.random() * (1000000 - 100) + 100);
+        sqlList = msSql.transform(randNum);
         Iterator<String> itrSql = sqlList.iterator();
         while (itrSql.hasNext()){
             sql = itrSql.next();
