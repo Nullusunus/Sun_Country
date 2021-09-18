@@ -5,6 +5,9 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+/*
+ *  Pg class implements methods to select from and insert into data for the postgres database.
+ */
 public class Pg {
     static Connection connection = null;
     static Statement statement = null;
@@ -23,6 +26,9 @@ public class Pg {
         }
     }
 
+    /*
+     *  The selectAll() method outputs all rows of the airplane table.
+     */
     public static void selectAll() {
         try {
             ResultSet rs = statement.executeQuery("SELECT * FROM airplane;");
@@ -43,14 +49,11 @@ public class Pg {
         }
     }
 
-    public static void insert() {
+    /*
+     *  The insert() method executes the insert command in the sql parameter.
+     */
+    public static void insert(String sql) {
         try {
-            String sql = "INSERT INTO airplane (airplaneid, callsign, aircraft_type, passenger_capacity, max_altitude, max_speed) "
-                    + "VALUES (10020, 'SCX3006', 'B738', 210, 41000, 530);";
-            statement.executeUpdate(sql);
-
-            sql = "INSERT INTO airplane (airplaneid, callsign, aircraft_type, passenger_capacity, max_altitude, max_speed) "
-                    + "VALUES (20010, 'SCX1177', 'B711', 211, 41001, 531);";
             statement.executeUpdate(sql);
             connection.commit();
         } catch (Exception e) {
